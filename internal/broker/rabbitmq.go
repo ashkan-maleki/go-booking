@@ -1,9 +1,8 @@
 package broker
 
 import (
-	"github.com/mamalmaleki/go-advanced-samples/rad/eda/orchestrator/cmd/config"
+	"github.com/mamalmaleki/go-advanced-samples/cmd/config"
 	amqp "github.com/rabbitmq/amqp091-go"
-	"log"
 )
 
 var (
@@ -27,11 +26,4 @@ func NewRabbitMQ() (*amqp.Connection, ConnectionClose, error) {
 	return conn, conn.Close, nil
 }
 
-func Setup() {
-	conn, connectionClose, err := NewRabbitMQ()
-	if err != nil {
-		panic(err)
-	}
-	defer connectionClose()
-	log.Println(conn)
-}
+

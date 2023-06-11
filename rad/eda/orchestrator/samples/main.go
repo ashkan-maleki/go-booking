@@ -3,7 +3,7 @@ package samples
 import (
 	"context"
 	"fmt"
-	"github.com/mamalmaleki/go-advanced-samples/rad/eda/orchestrator/cmd/config"
+	"github.com/mamalmaleki/go-advanced-samples/cmd/config"
 	"github.com/rabbitmq/amqp091-go"
 	"log"
 	"strings"
