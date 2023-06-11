@@ -1,10 +1,10 @@
 version: '3.7'
 
 services:
-  rabbitmq:
-    container_name: rabbitmq
-    networks:
-      - recipe-network
+  portainer:
+    container_name: portainer
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data

@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  rabbitmq:
-    image: rabbitmq:3-management
+  portainer:
+    image: portainer/portainer-ce
 
-networks:
-  recipe-network:
-    driver: bridge
+
+volumes:
+  portainer_data:
